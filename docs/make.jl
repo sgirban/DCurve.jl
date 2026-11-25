@@ -15,6 +15,8 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "Constructors" => "constructors.md",
+        "Curve Generators" => "generators.md",
+        "Smart Indexing" => "indexing.md",
     ],
 )
 
