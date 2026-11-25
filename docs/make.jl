@@ -5,7 +5,7 @@ DocMeta.setdocmeta!(DCurve, :DocTestSetup, :(using DCurve); recursive=true)
 
 makedocs(;
     modules=[DCurve],
-    authors="Vizman Cornelia, Girban Sava",
+    authors="Girban Sava",
     sitename="DCurve.jl",
     format=Documenter.HTML(;
         canonical="https://sgirban.github.io/DCurve.jl",
@@ -18,6 +18,7 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/sgirban/DCurve.jl",
+    repo="github.com/sgirban/DCurve.jl.git",
     devbranch="main",
+    push_preview=true,
 )
