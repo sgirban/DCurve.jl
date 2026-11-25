@@ -1,0 +1,2 @@
+env:
+  DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }}
