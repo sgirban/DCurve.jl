@@ -58,12 +58,16 @@ jobs:
       - uses: julia-actions/cache@v2
       - uses: julia-actions/julia-buildpkg@v1
       - name: Run doctests
-        shell: julia --project=docs --color=yes {0}
         run: |
-          using Documenter: DocMeta, doctest
-          using DCurve
-          DocMeta.setdocmeta!(DCurve, :DocTestSetup, :(using DCurve); recursive=true)
-          doctest(DCurve)
+          julia --project=docs -e '
+            using Pkg
+            Pkg.develop(PackageSpec(path=pwd()))
+            Pkg.instantiate()
+            using Documenter: DocMeta, doctest
+            using DCurve
+            DocMeta.setdocmeta!(DCurve, :DocTestSetup, :(using DCurve); recursive=true)
+            doctest(DCurve)
+          '
       - uses: julia-actions/julia-docdeploy@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
