@@ -3,7 +3,7 @@ DCurve = "fd50fa6d-09ed-47ca-8ffc-494fd3a2c46a"
 Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
 
 [sources]
-DCurve = {path = ".."}
+DCurve = {path = "/home/sava/.julia/dev/DCurve"}
 
 [compat]
 Documenter = "1"
