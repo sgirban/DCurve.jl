@@ -6,6 +6,7 @@ using Random
 include("constructors.jl")
 include("indexing.jl")
 include("generators.jl")
+include("plotting.jl")
 include("io.jl")
 
 Base.eltype(::DiscreteCurve{T}) where {T} = T
@@ -27,6 +28,13 @@ export DiscreteCurve,
        random_curve,
        ndim,
        npoints,
-       isclosed
-
+       isclosed,
+       save_curve, load_curve,
+       save_dcrv, load_dcrv,
+       save_curves, load_curves,
+       save_obj, load_obj,
+       save_ply, load_ply,
+       save_pcd, load_pcd,
+       save_csv, load_csv,
+       save_json, load_json
 end
